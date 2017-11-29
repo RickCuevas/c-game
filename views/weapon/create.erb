@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%#include "weapon.h" %>
+<% tfetch(QVariantMap, weapon); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Weapon</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>Name<br /><input name="weapon[name]" value="<%= weapon["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Space<br /><input name="weapon[space]" value="<%= weapon["space"] %>" /></label>
+  </p>
+  <p>
+    <label>Attack<br /><input name="weapon[attack]" value="<%= weapon["attack"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

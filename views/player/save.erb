@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<%#include "player.h" %>
+<% tfetch(QVariantMap, player); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing Player</h1>
+
+<%== formTag(urla("save", player["id"]), Tf::Post) %>
+  <p>
+    <label>ID<br /><input type="text" name="player[id]" value="<%= player["id"] %>" readonly="readonly" /></label>
+  </p>
+  <p>
+    <label>Name<br /><input type="text" name="player[name]" value="<%= player["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Space<br /><input type="text" name="player[space]" value="<%= player["space"] %>" /></label>
+  </p>
+  <p>
+    <label>Xp<br /><input type="text" name="player[xp]" value="<%= player["xp"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", player["id"])) %> |
+<%== linkTo("Back", urla("index")) %>
+</body>
+</html>

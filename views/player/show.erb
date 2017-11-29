@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%#include "player.h" %>
+<% tfetch(Player, player); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Player</h1>
+<dt>ID</dt><dd><%= player.id() %></dd><br />
+<dt>Name</dt><dd><%= player.name() %></dd><br />
+<dt>Space</dt><dd><%= player.space() %></dd><br />
+<dt>Xp</dt><dd><%= player.xp() %></dd><br />
+<dt>Created at</dt><dd><%= player.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= player.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= player.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("save", player.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

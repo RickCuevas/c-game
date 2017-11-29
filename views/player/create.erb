@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%#include "player.h" %>
+<% tfetch(QVariantMap, player); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Player</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>Name<br /><input name="player[name]" value="<%= player["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Space<br /><input name="player[space]" value="<%= player["space"] %>" /></label>
+  </p>
+  <p>
+    <label>Xp<br /><input name="player[xp]" value="<%= player["xp"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

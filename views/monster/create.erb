@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%#include "monster.h" %>
+<% tfetch(QVariantMap, monster); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Monster</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>Name<br /><input name="monster[name]" value="<%= monster["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Space<br /><input name="monster[space]" value="<%= monster["space"] %>" /></label>
+  </p>
+  <p>
+    <label>Hp<br /><input name="monster[hp]" value="<%= monster["hp"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

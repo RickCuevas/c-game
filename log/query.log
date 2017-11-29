@@ -1,0 +1,99 @@
+2017-11-18 12:52:57  [342481] [BEGIN] [databaseId:0]
+2017-11-18 12:52:57  [342481] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-18 12:52:57  [342481] [COMMIT] [databaseId:0]
+2017-11-18 15:05:11  [580558] [BEGIN] [databaseId:0]
+2017-11-18 15:05:11  [580558] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-18 15:05:11  [580558] [COMMIT] [databaseId:0]
+2017-11-18 15:06:38  [584406] [BEGIN] [databaseId:0]
+2017-11-18 15:06:38  [584406] SELECT "id","name","space","hp","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-11-18 15:06:38  [584406] [COMMIT] [databaseId:0]
+2017-11-21 19:21:53  [26908] [BEGIN] [databaseId:0]
+2017-11-21 19:21:53  [26908] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-21 19:21:53  [26908] [COMMIT] [databaseId:0]
+2017-11-21 19:21:57  [26908] [BEGIN] [databaseId:0]
+2017-11-21 19:21:57  [26908] SELECT "id","name","space","hp","created_at","updated_at","lock_revision" FROM "monster" t0
+2017-11-21 19:21:57  [26908] [COMMIT] [databaseId:0]
+2017-11-21 19:22:01  [26908] [BEGIN] [databaseId:0]
+2017-11-21 19:22:01  [26908] SELECT "id","name","space","attack","created_at","updated_at","lock_revision" FROM "weapon" t0
+2017-11-21 19:22:01  [26908] [COMMIT] [databaseId:0]
+2017-11-21 19:22:05  [26908] [BEGIN] [databaseId:0]
+2017-11-21 19:22:05  [26908] SELECT "id","name","space","xp","created_at","updated_at","lock_revision" FROM "player" t0
+2017-11-21 19:22:05  [26908] [COMMIT] [databaseId:0]
+2017-11-29 15:48:45  [391260] [BEGIN] [databaseId:0]
+2017-11-29 15:48:45  [391260] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:48:45  [391260] [COMMIT] [databaseId:0]
+2017-11-29 15:48:57  [391485] [BEGIN] [databaseId:0]
+2017-11-29 15:48:57  [391485] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:48:57  [391485] [COMMIT] [databaseId:0]
+2017-11-29 15:50:33  [395366] [BEGIN] [databaseId:0]
+2017-11-29 15:50:33  [395366] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:50:33  [395366] [COMMIT] [databaseId:0]
+2017-11-29 15:51:00  [396030] [BEGIN] [databaseId:0]
+2017-11-29 15:51:00  [396030] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:51:00  [396030] [COMMIT] [databaseId:0]
+2017-11-29 15:51:30  [396892] [BEGIN] [databaseId:0]
+2017-11-29 15:51:30  [396892] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:51:30  [396892] [COMMIT] [databaseId:0]
+2017-11-29 15:51:44  [397250] [BEGIN] [databaseId:0]
+2017-11-29 15:51:44  [397250] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:51:44  [397250] [COMMIT] [databaseId:0]
+2017-11-29 15:53:46  [400643] [BEGIN] [databaseId:0]
+2017-11-29 15:53:46  [400643] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:53:46  [400643] [COMMIT] [databaseId:0]
+2017-11-29 15:53:47  [400643] [BEGIN] [databaseId:0]
+2017-11-29 15:53:47  [400643] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:53:47  [400643] [COMMIT] [databaseId:0]
+2017-11-29 15:53:52  [400643] [BEGIN] [databaseId:0]
+2017-11-29 15:53:52  [400643] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:53:52  [400643] [COMMIT] [databaseId:0]
+2017-11-29 15:54:15  [401191] [BEGIN] [databaseId:0]
+2017-11-29 15:54:15  [401191] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:54:15  [401191] [COMMIT] [databaseId:0]
+2017-11-29 15:54:17  [401191] [BEGIN] [databaseId:0]
+2017-11-29 15:54:17  [401191] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:54:17  [401191] [COMMIT] [databaseId:0]
+2017-11-29 15:59:23  [409152] [BEGIN] [databaseId:0]
+2017-11-29 15:59:23  [409152] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 15:59:23  [409152] [COMMIT] [databaseId:0]
+2017-11-29 16:01:00  [411880] [BEGIN] [databaseId:0]
+2017-11-29 16:01:00  [411880] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 16:01:00  [411880] [COMMIT] [databaseId:0]
+2017-11-29 16:06:33  [418617] [BEGIN] [databaseId:0]
+2017-11-29 16:06:33  [418617] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 16:06:33  [418617] [COMMIT] [databaseId:0]
+2017-11-29 17:41:56  [437012] [BEGIN] [databaseId:0]
+2017-11-29 17:41:56  [437012] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:41:56  [437012] [COMMIT] [databaseId:0]
+2017-11-29 17:42:59  [438317] [BEGIN] [databaseId:0]
+2017-11-29 17:42:59  [438317] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:42:59  [438317] [COMMIT] [databaseId:0]
+2017-11-29 17:44:19  [440157] [BEGIN] [databaseId:0]
+2017-11-29 17:44:19  [440157] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:44:19  [440157] [COMMIT] [databaseId:0]
+2017-11-29 17:47:38  [444691] [BEGIN] [databaseId:0]
+2017-11-29 17:47:38  [444691] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:47:38  [444691] [COMMIT] [databaseId:0]
+2017-11-29 17:49:23  [446729] [BEGIN] [databaseId:0]
+2017-11-29 17:49:23  [446729] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:49:23  [446729] [COMMIT] [databaseId:0]
+2017-11-29 17:53:15  [451566] [BEGIN] [databaseId:0]
+2017-11-29 17:53:15  [451566] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:53:15  [451566] [COMMIT] [databaseId:0]
+2017-11-29 17:55:43  [454905] [BEGIN] [databaseId:0]
+2017-11-29 17:55:43  [454905] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:55:43  [454905] [COMMIT] [databaseId:0]
+2017-11-29 17:56:30  [456190] [BEGIN] [databaseId:0]
+2017-11-29 17:56:30  [456190] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0
+2017-11-29 17:56:30  [456190] [COMMIT] [databaseId:0]
+2017-11-29 17:56:36  [456190] [BEGIN] [databaseId:0]
+2017-11-29 17:56:36  [456190] INSERT INTO blog ("title", "body", "created_at", "updated_at", "lock_revision") VALUES ('gf', 'fg', '2017-11-29T17:56:36', '2017-11-29T17:56:36', 1)
+2017-11-29 17:56:36  [456190] [COMMIT] [databaseId:0]
+2017-11-29 17:56:36  [456190] [BEGIN] [databaseId:0]
+2017-11-29 17:56:36  [456190] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0 WHERE t0."id"=1 LIMIT 1
+2017-11-29 17:56:36  [456190] [COMMIT] [databaseId:0]
+2017-11-29 17:56:52  [456781] [BEGIN] [databaseId:0]
+2017-11-29 17:56:52  [456781] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0 WHERE t0."id"=1 LIMIT 1
+2017-11-29 17:56:52  [456781] [COMMIT] [databaseId:0]
+2017-11-29 17:59:42  [461357] [BEGIN] [databaseId:0]
+2017-11-29 17:59:42  [461357] SELECT "id","title","body","created_at","updated_at","lock_revision" FROM "blog" t0 WHERE t0."id"=1 LIMIT 1
+2017-11-29 17:59:42  [461357] [COMMIT] [databaseId:0]

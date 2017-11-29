@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%#include "weapon.h" %>
+<% tfetch(Weapon, weapon); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Weapon</h1>
+<dt>ID</dt><dd><%= weapon.id() %></dd><br />
+<dt>Name</dt><dd><%= weapon.name() %></dd><br />
+<dt>Space</dt><dd><%= weapon.space() %></dd><br />
+<dt>Attack</dt><dd><%= weapon.attack() %></dd><br />
+<dt>Created at</dt><dd><%= weapon.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= weapon.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= weapon.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("save", weapon.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

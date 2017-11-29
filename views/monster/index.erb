@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<%#include "monster.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Monster</h1>
+
+<%== linkTo("Create a new Monster", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Space</th>
+    <th>Hp</th>
+  </tr>
+<% tfetch(QList<Monster>, monsterList); %>
+<% for (const auto &i : monsterList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.name() %></td>
+    <td><%= i.space() %></td>
+    <td><%= i.hp() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>
