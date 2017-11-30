@@ -26,15 +26,15 @@ var c = a.getContext('2d');
 // end shim
 
 
-var sw = a.width, 
-sh = a.height, 
+var sw = a.width,
+sh = a.height,
 M = Math,
 Mc = M.cos,
 Ms = M.sin,
 ran = M.random,
-pfloat = 0, 
-pi = M.PI, 
-dragons = [], 
+pfloat = 0,
+pi = M.PI,
+dragons = [],
 shape = [],
 
 
@@ -42,7 +42,7 @@ loop = function() {
 
   a.width = sw; // clear screen
 
-  for ( j = 0; j < 7; j++) {
+  for ( j = 0; j < 15; j++) {
     if ( !dragons[j] ) dragons[j] = dragon(j); // create dragons initially
     dragons[j]();
   }
@@ -56,18 +56,18 @@ loop = function() {
 
 dragon = function(index) {
 
-  var scale = 0.1 + index * index / 49, 
-    gx = ran() * sw / scale, 
-    gy = sh / scale, 
+  var scale = 0.1 + index * index / 49,
+    gx = ran() * sw / scale,
+    gy = sh / scale,
     lim = 300, // this gets inlined, no good!
-    speed = 3 + ran() * 5, 
-    direction = pi, //0, //ran() * pi * 2, //ran(0,TAU), 
-    direction1 = direction, 
+    speed = 3 + ran() * 5,
+    direction = pi, //0, //ran() * pi * 2, //ran(0,TAU),
+    direction1 = direction,
     spine = [];
 
   return function() {
 
-    // check if dragon flies off screen 
+    // check if dragon flies off screen
     if (gx < -lim || gx > sw / scale + lim || gy < -lim || gy > sh / scale + lim) {
 
       // flip them around
@@ -127,7 +127,7 @@ dragon = function(index) {
       } else {
 
         // i is 0 - first point in spine
-        spine[i] = {x: gx, y: gy, px: 0, py: 0}; 
+        spine[i] = {x: gx, y: gy, px: 0, py: 0};
 
       }
 
@@ -147,7 +147,7 @@ dragon = function(index) {
         var L = 1;
       } else {
         // draw the other half from tail back to nose
-        index = 152 - i;  
+        index = 152 - i;
         L = -1;
       }
 
@@ -178,7 +178,7 @@ dragon = function(index) {
       }
 
       c.lineTo(
-        (spineNode.x + x * L * spineNode.px) * scale, 
+        (spineNode.x + x * L * spineNode.px) * scale,
         (spineNode.y + x * L * spineNode.py) * scale
       );
 
