@@ -20,6 +20,19 @@ void BlogController::welcome()
 {
     render();
 }
+
+void BlogController::loop()
+{
+    render();
+}
+void BlogController::battle()
+{
+    render();
+}
+void BlogController::equip()
+{
+    render();
+}
 void BlogController::create()
 {
     switch (httpRequest().method()) {

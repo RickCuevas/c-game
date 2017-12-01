@@ -1,13 +1,19 @@
+HEADERS += blog_battleView.moc
+SOURCES += blog_battleView.cpp
 HEADERS += blog_createView.moc
 SOURCES += blog_createView.cpp
-HEADERS += blog_indexView.moc
-SOURCES += blog_indexView.cpp
+HEADERS += blog_equipView.moc
+SOURCES += blog_equipView.cpp
+HEADERS += blog_loopView.moc
+SOURCES += blog_loopView.cpp
 HEADERS += blog_saveView.moc
 SOURCES += blog_saveView.cpp
 HEADERS += blog_showView.moc
 SOURCES += blog_showView.cpp
 HEADERS += blog_welcomeView.moc
 SOURCES += blog_welcomeView.cpp
+HEADERS += layouts_applicationView.moc
+SOURCES += layouts_applicationView.cpp
 HEADERS += monster_createView.moc
 SOURCES += monster_createView.cpp
 HEADERS += monster_indexView.moc
@@ -34,11 +40,14 @@ HEADERS += weapon_showView.moc
 SOURCES += weapon_showView.cpp
 
 # include view files in the project
+views.files += ../blog/battle.erb
 views.files += ../blog/create.erb
-views.files += ../blog/index.erb
+views.files += ../blog/equip.erb
+views.files += ../blog/loop.erb
 views.files += ../blog/save.erb
 views.files += ../blog/show.erb
 views.files += ../blog/welcome.erb
+views.files += ../layouts/application.erb
 views.files += ../monster/create.erb
 views.files += ../monster/index.erb
 views.files += ../monster/save.erb

@@ -14,6 +14,9 @@ public:
 public slots:
     void index();
     void welcome();
+    void loop();
+    void battle();
+    void equip();
     void show(const QString &id);
     void create();
     void save(const QString &id);

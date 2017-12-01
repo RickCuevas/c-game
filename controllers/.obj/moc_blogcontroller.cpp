@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_BlogController_t {
-    QByteArrayData data[9];
-    char stringdata0[57];
+    QByteArrayData data[12];
+    char stringdata0[75];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,15 +35,19 @@ QT_MOC_LITERAL(0, 0, 14), // "BlogController"
 QT_MOC_LITERAL(1, 15, 5), // "index"
 QT_MOC_LITERAL(2, 21, 0), // ""
 QT_MOC_LITERAL(3, 22, 7), // "welcome"
-QT_MOC_LITERAL(4, 30, 4), // "show"
-QT_MOC_LITERAL(5, 35, 2), // "id"
-QT_MOC_LITERAL(6, 38, 6), // "create"
-QT_MOC_LITERAL(7, 45, 4), // "save"
-QT_MOC_LITERAL(8, 50, 6) // "remove"
+QT_MOC_LITERAL(4, 30, 4), // "loop"
+QT_MOC_LITERAL(5, 35, 6), // "battle"
+QT_MOC_LITERAL(6, 42, 5), // "equip"
+QT_MOC_LITERAL(7, 48, 4), // "show"
+QT_MOC_LITERAL(8, 53, 2), // "id"
+QT_MOC_LITERAL(9, 56, 6), // "create"
+QT_MOC_LITERAL(10, 63, 4), // "save"
+QT_MOC_LITERAL(11, 68, 6) // "remove"
 
     },
-    "BlogController\0index\0\0welcome\0show\0"
-    "id\0create\0save\0remove"
+    "BlogController\0index\0\0welcome\0loop\0"
+    "battle\0equip\0show\0id\0create\0save\0"
+    "remove"
 };
 #undef QT_MOC_LITERAL
 
@@ -53,34 +57,40 @@ static const uint qt_meta_data_BlogController[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
-       1,   57, // constructors
+       1,   75, // constructors
        0,       // flags
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x0a /* Public */,
-       3,    0,   45,    2, 0x0a /* Public */,
-       4,    1,   46,    2, 0x0a /* Public */,
-       6,    0,   49,    2, 0x0a /* Public */,
-       7,    1,   50,    2, 0x0a /* Public */,
-       8,    1,   53,    2, 0x0a /* Public */,
+       1,    0,   59,    2, 0x0a /* Public */,
+       3,    0,   60,    2, 0x0a /* Public */,
+       4,    0,   61,    2, 0x0a /* Public */,
+       5,    0,   62,    2, 0x0a /* Public */,
+       6,    0,   63,    2, 0x0a /* Public */,
+       7,    1,   64,    2, 0x0a /* Public */,
+       9,    0,   67,    2, 0x0a /* Public */,
+      10,    1,   68,    2, 0x0a /* Public */,
+      11,    1,   71,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void, QMetaType::QString,    8,
 
  // constructors: parameters
     0x80000000 | 2,
 
  // constructors: name, argc, parameters, tag, flags
-       0,    0,   56,    2, 0x0e /* Public */,
+       0,    0,   74,    2, 0x0e /* Public */,
 
        0        // eod
 };
@@ -99,10 +109,13 @@ void BlogController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: _t->index(); break;
         case 1: _t->welcome(); break;
-        case 2: _t->show((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 3: _t->create(); break;
-        case 4: _t->save((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 5: _t->remove((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 2: _t->loop(); break;
+        case 3: _t->battle(); break;
+        case 4: _t->equip(); break;
+        case 5: _t->show((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 6: _t->create(); break;
+        case 7: _t->save((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 8: _t->remove((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -133,13 +146,13 @@ int BlogController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }
