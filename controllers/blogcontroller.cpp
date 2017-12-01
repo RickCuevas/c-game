@@ -18,7 +18,7 @@ void BlogController::show(const QString &id)
 
 void BlogController::welcome()
 {
-    render();
+    render("welcome", "hello");
 }
 
 void BlogController::loop()
