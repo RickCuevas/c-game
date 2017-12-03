@@ -6,8 +6,15 @@
 #include "../models/sqlobjects/playerobject.h"
 #include "../models/sqlobjects/monsterobject.h"
 #include "../models/sqlobjects/weaponobject.h"
+#include<array>
 
-
+5,8,11,15,18,22,26,27
+array<int, 26> things_to_map = { 2, 3, 4,  6, 7, 9,10,  12, 13,
+    14, 16, 17, 19, 20, 21, 23, 24, 25,  28, 29, 31, 32, 33, 35, 36, 38, 39,  41, 42, 43, 45, 46,
+    48, 49, 50,  52, 53, 54,  57, 58,  60, 61, 62,  64, 65,  67, 68,  70, 71, 72,  74, 75,  77, 79, 79,  81,
+    82, 83,  86, 87,  89, 90, 91, 93, 94,  96, 97, 99, 100, 101,  103, 104,  106, 107, 108,
+    110, 111, 112,   115, 116, 118, 119, 120,  122, 123,  125, 126,128,129,130,
+    132, 133, 135, 136, 137, 139, 140, 141};
 
 void BlogController::index()
 {
@@ -45,17 +52,11 @@ void BlogController::start()
     QList<Weapon> weapons = Weapon::getAll();
 
     for (int i=0; i < monster_length -1; i++) {
-        if (monsters[i].space() == current_player.space()) {
+        monsters[i].remove();
 
-            // set monster battle attribute to true
-            redirect( urla("battle") );
-        }
     }
     for (int i=0; i < weapon_length -1; i++) {
-        if (weapons[i].space() == current_player.space()) {
-            // set weapon equip attribute to true
-            redirect( urla("equip") );
-        }
+        weapons[i].remove();
     }
 
     // make player
