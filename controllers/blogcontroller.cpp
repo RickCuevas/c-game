@@ -30,6 +30,34 @@ void BlogController::welcome()
 
 void BlogController::start()
 {
+
+    TSqlORMapper<MonsterObject> mapper;
+    mapper.removeAll();
+    TSqlORMapper<PlayerObject> mapper;
+    mapper.removeAll();
+    TSqlORMapper<WeaponObject> mapper;
+    mapper.removeAll();
+
+    int monster_length = Monster::count();
+    int weapon_length = Weapon::count();
+
+    QList<Monster> monsters =  Monster::getAll();
+    QList<Weapon> weapons = Weapon::getAll();
+
+    for (int i=0; i < monster_length -1; i++) {
+        if (monsters[i].space() == current_player.space()) {
+
+            // set monster battle attribute to true
+            redirect( urla("battle") );
+        }
+    }
+    for (int i=0; i < weapon_length -1; i++) {
+        if (weapons[i].space() == current_player.space()) {
+            // set weapon equip attribute to true
+            redirect( urla("equip") );
+        }
+    }
+
     // make player
     PlayerObject player1;
     player1.space = 0;
@@ -180,12 +208,15 @@ QString nothing_found = "Nothing...found";
 
 for (int i=0; i < monster_length -1; i++) {
     if (monsters[i].space() == current_player.space()) {
-        render("battle");
+
+        // set monster battle attribute to true
+        redirect( urla("battle") );
     }
 }
 for (int i=0; i < weapon_length -1; i++) {
     if (weapons[i].space() == current_player.space()) {
-        render("equip");
+        // set weapon equip attribute to true
+        redirect( urla("equip") );
     }
 }
 
@@ -198,10 +229,63 @@ render();
 }
 void BlogController::battle()
 {
+    // query to find  the monster that you will be fighting
+    if(monster.name == "Polywhirl") {
+        std::string image_url = "http://www.oocities.org/tokyo/blossom/9377/Koffing_Misc/Poliwhirl.gif";
+    }
+
+    else if(monster.name == "Charmander") {
+        std::string image_url = "http://fc02.deviantart.net/fs70/f/2011/174/0/d/charmander_by_sageraziel-d3jt9kq.gif";
+    }
+    else if(monster.name == "Serpent") {
+        std::string image_url = "https://pa1.narvii.com/6642/bcd71eb8ca74a8af0561b54e82a8d531e04af48e_128.gif";
+    }
+    else if(monster.name == "Robo") {
+        std::string image_url = "http://www.animatedimages.org/data/media/118/animated-robot-image-0014.gif";
+    }
+    else if(monster.name == "Knight") {
+        std::string image_url = "http://www.oocities.org/kevins_killa_gifs/warrior01.gif";
+    }
+    else if(monster.name == "SeaMonster") {
+        std::string image_url = "https://orig00.deviantart.net/b32d/f/2017/038/1/2/1259aba8597166d46af82ded72f254f3-dayaa7q.gif";
+    }
+    else if(monster.name == "AngryMushroom") {
+        std::string image_url = "http://ludumdare.com/compo/wp-content/uploads/2015/09/BAD-MUSHROOM-walk2.gif";
+    }
+    else if(monster.name == "Dark Genie") {
+        std::string image_url = "http://francoisegamma.computersclub.org/gifs/genie_e0.gif";
+    }
+    else if(monster.name == "Cool T-Rex") {
+        std::string image_url = "http://buttonshy.com/championland/PL-TDBG/TrexJump.gif";
+    }
+    else if(monster.name == "Dark Knight") {
+        std::string image_url = "https://orig00.deviantart.net/f150/f/2016/077/b/0/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif";
+    }
+    else if(monster.name == "Lord Knight") {
+        std::string image_url = "https://i.imgur.com/ZmMQJwB.gif";
+    }
+    else if(monster.name == "Dark Knight") {
+        std::string image_url = "https://orig00.deviantart.net/f150/f/2016/077/b/0/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif";
+    }
+    else if(monster.name == "Evil Kirby") {
+        std::string image_url = "http://3.bp.blogspot.com/_IrdEB7DnyGc/Si76otEI4LI/AAAAAAAAALA/xtrxZSWWz2E/s400/sword-kirby.gif";
+    }
+    else if(monster.name == "The Italian") {
+        std::string image_url = "https://orig00.deviantart.net/de7a/f/2016/345/c/d/super_mario_run_by_t_free-daraj8q.gif";
+    }
+    else if(monster.name == "Dragon") {
+        std::string image_url = "http://media.giphy.com/media/3o85xFeUIuMDHsLmFi/giphy.gif";
+    }
+
+
+
+
+
     render();
 }
 void BlogController::equip()
 {
+    //query to find the item you will be equiping
     render();
 }
 void BlogController::create()
