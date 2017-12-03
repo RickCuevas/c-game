@@ -18,6 +18,10 @@ public slots:
     void start();
     void battle();
     void equip();
+    void nada();
+    void staging();
+    void equip_player();
+    void randomize_things_to_map();
     void show(const QString &id);
     void create();
     void save(const QString &id);
